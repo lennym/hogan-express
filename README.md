@@ -14,9 +14,9 @@ Supports
 
 ### Install
 
-Install hogan-express using [npm][4]:
+Install hogan-express-strict using [npm][4]:
 
-`npm install hogan-express`
+`npm install hogan-express-strict`
 
 ### Usage
 
@@ -29,7 +29,7 @@ app.set 'view engine', 'html'    # use .html extension for templates
 app.set 'layout', 'layout'       # use layout.html as the default layout
 app.set 'partials', foo: 'foo'   # define partials available to all pages
 app.enable 'view cache'
-app.engine 'html', require('hogan-express')
+app.engine 'html', require('hogan-express-strict')
 ```
 
 #### Rendering a template
@@ -157,12 +157,12 @@ rendered html:
 
 ### Contributors
 
-[Contributors list](https://github.com/vol4ok/hogan-express/graphs/contributors)
+[Contributors list](https://github.com/lennym/hogan-express/graphs/contributors)
 
 Thank you for your participation!
 
 ### License
-hogan-express is released under an [MIT License][5].
+hogan-express-strict is released under an [MIT License][5].
 
 [1]: http://mustache.github.io/mustache.5.html
 [2]: http://expressjs.com/
