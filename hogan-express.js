@@ -19,6 +19,22 @@
 
   hogan = require('hogan.js');
 
+  var Template = function () {
+    return hogan.Template.apply(this, arguments);
+  };
+  require('util').inherits(Template, hogan.Template);
+
+  Template.prototype.ep = function ensurePartial(symbol) {
+    var tpl = hogan.Template.prototype.ep.apply(this, arguments);
+    if (tpl === null) {
+      var partial = this.partials[symbol];
+      throw new Error('Undefined partial template: ' + partial.name);
+    }
+    return tpl;
+  };
+
+  hogan.template = Template;
+
   cache = {};
 
   ctx = {};

@@ -1,4 +1,6 @@
-## HOGAN-EXPRESS
+## HOGAN-EXPRESS-STRICT
+
+A fork of [https://github.com/vol4ok/hogan-express](hogan-express) that throws if a partial template does not exist.
 
 [Mustache][1] template engine for the [express 3.x][2] web framework.
 
