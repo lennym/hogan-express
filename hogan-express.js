@@ -69,7 +69,11 @@
       if (!$.extname(path)) {
         path += ctx.ext;
       }
+      var oldpath = path;
       path = ctx.lookup(path);
+      if (typeof path !== 'string') {
+        throw new Error('Partial template ' + oldpath + ' could not be found');
+      }
       count++;
       read(path, opt, (function(name, path) {
         return function(err, str) {
